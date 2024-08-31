@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+    title: "Privacy Policy",
+    description: "Privacy Policy",
+}
+
 const PrivacyPage = () => {
   return (
     <div dir='ltr' className='px-4 py-8 max-w-4xl mx-auto space-y-6'>
