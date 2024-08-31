@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrivacyPage = () => {
   return (
-    <div  className='space-y-3' style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+    <div dir='ltr'  className='space-y-3 ' style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1 className='text-lg font-bold text-center' >Privacy Policy</h1>
       
       <p>Your privacy is important to us. This Privacy Policy explains how Product Loop collects, uses, and safeguards your personal information when you use our website.</p>

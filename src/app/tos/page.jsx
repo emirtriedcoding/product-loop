@@ -2,7 +2,7 @@ import React from 'react';
 
 const TOSPage = () => {
   return (
-    <div className='space-y-3' style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+    <div dir='ltr' className='space-y-3' style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1 className='font-bold text-lg' >Terms of Service</h1>
       
       <p className='text-sm' >Welcome to Product Loop. By accessing and using this website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully before using the website.</p>
