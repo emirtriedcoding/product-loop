@@ -28,6 +28,14 @@ const Header = ({ session }) => {
       label: "پیشنهادات و انتقادات",
       path: "/feedback",
     },
+    {
+      label : "Privacy and Policy" ,
+      path :"/privacy"
+    },
+    {
+      label : "Terms of use" ,
+      path : "/tos"
+    }
   ];
 
   useEffect(() => {
