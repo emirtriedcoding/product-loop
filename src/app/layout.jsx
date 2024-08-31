@@ -28,6 +28,8 @@ const RootLayout = async ({ children }) => {
   return (
     <html lang="fa" dir="rtl">
       <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-1ZNC1723V9"

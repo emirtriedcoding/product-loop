@@ -15,6 +15,9 @@ const Footer = () => {
         <Link href="/categories" className="link-hover link">
           دسته بندی ها
         </Link>
+        <a href="https://productloop.ir/privacy">Privacy</a>
+        <a href="/privacy">Privacy and Policy</a>
+
       </nav>
       <nav className="grid grid-flow-col gap-4 text-xs font-bold">
         <Link href="https://www.linkedin.com/in/emirtreidcoding/">
