@@ -16,6 +16,7 @@ const Footer = () => {
           دسته بندی ها
         </Link>
         <a href="https://productloop.ir/privacy">Privacy</a>
+        
         <a href="/privacy">Privacy and Policy</a>
 
       </nav>

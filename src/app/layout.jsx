@@ -26,7 +26,7 @@ const RootLayout = async ({ children }) => {
   const session = await auth();
 
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="en" dir="ltr">
       <head>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
