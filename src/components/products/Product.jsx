@@ -276,7 +276,7 @@ const Product = ({ product, user, rank }) => {
           ))}
         </div>
       </div>
-      <div className="mx-auto grid w-1/2 grid-cols-12 gap-3">
+      <div className="mx-auto grid lg:w-1/2 grid-cols-12 gap-3">
         <div className="avatar online">
           <div className="mask mask-squircle w-16">
             <img src={product.user.image} alt="Maker" />
