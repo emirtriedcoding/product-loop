@@ -41,15 +41,16 @@ export const {
     },
   },
   session: {
-    strategy : "jwt"
-  } ,
+    strategy: "jwt",
+  },
   cookies: {
     pkceCodeVerifier: {
-      name: 'next-auth.pkce.code_verifier',
+      name: "next-auth.pkce.code_verifier",
       options: {
         httpOnly: true,
-        sameSite: 'none',
-        path: '/',
+        path: "/",
+        maxAge: 60 * 60 * 24 * 7,
+        sameSite: "lax",
         secure: true,
       },
     },
