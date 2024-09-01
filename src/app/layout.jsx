@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import localFont from "next/font/local";
+
 import Script from "next/script";
 
 import NextTopLoader from "nextjs-toploader";
@@ -22,19 +24,37 @@ export const metadata = {
   },
 };
 
+const font = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Anjoman-R.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Anjoman-B.woff",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Anjoman-S.woff",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+});
+
 const RootLayout = async ({ children }) => {
   const session = await auth();
 
   return (
-    <html lang="en" dir="ltr">
+    <html lang="fa" dir="rtl">
       <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-1ZNC1723V9"
         ></Script>
-        <Script id="google-analytics" >
+        <Script id="google-analytics">
           {`
    window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -44,7 +64,7 @@ const RootLayout = async ({ children }) => {
   `}
         </Script>
       </head>
-      <body>
+      <body className={font.className} >
         <QueryProvider>
           <NextTopLoader height={4} color="#5347F6" />
           <Toaster
@@ -52,6 +72,7 @@ const RootLayout = async ({ children }) => {
             position="bottom-right"
             closeButton
             richColors
+            className={font.className}
           />
           <main className="space-y-10">
             <Header session={session} />

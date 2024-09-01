@@ -8,7 +8,7 @@ export const metadata = {
 
 const CategoriesPage = () => {
   return (
-    <div className="mt-10 space-y-6 p-3">
+    <div className="space-y-6 p-5">
       <h2 className="text-center text-xl font-bold">دسته بندی ها</h2>
       <div className="mx-auto grid max-w-xl grid-cols-2 gap-3 lg:grid-cols-3">
         {categories.map((cat) => (

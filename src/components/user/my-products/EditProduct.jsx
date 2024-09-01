@@ -110,7 +110,7 @@ const EditProduct = ({ product }) => {
   };
 
   return (
-    <div className="mx-auto mt-10 space-y-5 p-5 lg:max-w-4xl">
+    <div className="mx-auto space-y-5 p-5 lg:max-w-4xl">
       <h2 className="text-center text-xl font-bold">ویرایش محصول : </h2>
       <p className="text-center text-xs leading-loose text-gray-500 lg:text-sm">
         لطفا در نظر داشته باشید که با هر بار ویرایش محصول به حالت بررسی رفته و
@@ -264,7 +264,7 @@ const EditProduct = ({ product }) => {
             <span className="label-text font-semibold">گالری تصاویر :</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             {gallery.map((img , index) => (
               <img
               key={index}

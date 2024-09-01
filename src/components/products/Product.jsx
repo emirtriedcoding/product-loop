@@ -166,7 +166,7 @@ const Product = ({ product, user, rank }) => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="mx-auto space-y-8 p-3 lg:max-w-4xl"
+      className="mx-auto space-y-8 p-4 lg:max-w-4xl"
     >
       <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
         <div className="flex items-center gap-5">
@@ -197,7 +197,7 @@ const Product = ({ product, user, rank }) => {
         <span className="text-xs font-semibold text-secondary">
           نحوه خدمات : {pp}
         </span>
-        <div className="flex items-center gap-3 text-xs font-semibold lg:gap-5">
+        <div className="flex items-center gap-3 text-[9px] lg:text-xs font-semibold lg:gap-5">
           <Link
             className="flex cursor-pointer items-center gap-2 transition hover:scale-105"
             href="#comments"
@@ -329,15 +329,15 @@ const Product = ({ product, user, rank }) => {
             <div className="flex flex-col gap-5 rounded-lg border border-base-300 bg-base-100 p-5">
               <div className="flex flex-row-reverse gap-3">
                 <img
-                  src={product.user.image}
+                  src={product.user.image  || "/assets/avatar.png"}
                   alt="Maker"
                   className="h-10 w-10 rounded-full"
                 />
                 <div className="flex items-center gap-2">
                   <Pin strokeWidth={1.5} size={15} />
-                  <p className="text-xs text-gray-500">{product.user.email}</p>
+                  <p className="text-xs text-gray-500">{product.user.email.slice(0,5)}..@gmail.com</p>
                   <span className="text-sm font-semibold">
-                    {product.user.name}
+                    {product.user.name.slice(0,10)}
                   </span>
                 </div>
               </div>
@@ -352,17 +352,17 @@ const Product = ({ product, user, rank }) => {
             <div className="flex flex-col gap-5 rounded-lg border border-base-300 bg-base-100 p-5">
               <div className="flex flex-row-reverse gap-3">
                 <img
-                  src={comment.user.image}
+                  src={comment.user.image || "/assets/avatar.png"}
                   alt="User"
                   className="h-10 w-10 rounded-full"
                 />
                 <div className="flex items-center gap-2">
                   {comment.user._id === product.user._id && (
                     <div className="ml-2 rounded-lg bg-secondary p-1.5 text-[10px] font-bold text-white">
-                      سازنده محصول
+                      سازنده
                     </div>
                   )}
-                  <p className="text-xs text-gray-500">{comment.user.email}</p>
+                  <p className="text-xs text-gray-500">{comment.user.email.slice(0,5)}..@gmail.com</p>
                   <span className="text-sm font-semibold">
                     {comment.user.name}
                   </span>
@@ -464,7 +464,7 @@ const Product = ({ product, user, rank }) => {
         className="my-10 flex flex-col gap-8 rounded-lg bg-primary/5 p-5"
       >
         <h3 className="text-lg font-bold">درباره این محصول : </h3>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col lg:flex-row gap-5 items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={product.thumbnail} alt="Product Logo" className="h-14 w-14 rounded-lg" />
             <div className="space-y-2 font-bold">
@@ -511,7 +511,7 @@ const Product = ({ product, user, rank }) => {
             </Link>
           </p>
         )}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col lg:flex-row gap-5 items-center justify-between">
           <div className="flex flex-col items-center gap-3 text-lg font-bold">
             <span className="text-sm">رتبه محصول : </span>
             <span className="text-secondary">#{rank}</span>

@@ -139,7 +139,7 @@ const Step4 = ({
       </div>
       <div className="flex flex-col gap-3">
         <span className="text-sm font-bold text-gray-500">تصاویر محصول : </span>
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
           {gallery.map((img, index) => (
             <img key={index} src={img} alt="Product image" className="h-full w-full rounded-lg" />
           ))}
@@ -163,7 +163,7 @@ const Step4 = ({
               : "اشتراکی"}
         </span>
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-4 lg:items-center justify-between">
         <button onClick={prevStep} className="btn btn-outline">
           مرحله قبلی
         </button>

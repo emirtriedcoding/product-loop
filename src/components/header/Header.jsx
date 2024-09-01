@@ -28,14 +28,6 @@ const Header = ({ session }) => {
       label: "پیشنهادات و انتقادات",
       path: "/feedback",
     },
-    {
-      label : "Privacy and Policy" ,
-      path :"/privacy"
-    },
-    {
-      label : "Terms of use" ,
-      path : "/tos"
-    }
   ];
 
   useEffect(() => {
@@ -112,9 +104,7 @@ const Header = ({ session }) => {
       {session ? (
         <div className="flex items-center gap-6">
           <Link href={"/my-products/new"}>
-            <button className="btn btn-primary hidden lg:block">
-              ثبت محصول شما
-            </button>
+            <button className="btn btn-primary">ثبت محصول شما</button>
           </Link>
           <Link className="relative" href={"/notifications"}>
             <Bell size={20} />

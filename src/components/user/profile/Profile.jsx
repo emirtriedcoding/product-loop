@@ -22,9 +22,9 @@ const Profile = ({ user }) => {
   });
 
   return (
-    <div className="space-y-5 px-10">
+    <div className="space-y-5 p-5 lg:px-10">
       <h2 className="text-lg font-bold">اطلاعات حساب کاربری : </h2>
-      <div className="flex flex-col items-center gap-5 rounded-lg bg-white p-5 text-sm font-bold shadow-md">
+      <div className="flex flex-col items-center gap-5 rounded-lg bg-white p-5 text-xs font-bold shadow-md">
         <img
           src={user.image || "/assets/avatar.png"}
           alt="User Avatar"

@@ -12,7 +12,7 @@ const Products = async ({ isReview = false, products }) => {
   const user = await authUser();
 
   return (
-    <div className="mx-auto h-screen max-w-sm space-y-8 lg:max-w-3xl">
+    <div className="mx-auto h-screen max-w-sm space-y-8 p-3 lg:max-w-3xl">
       {isReview && <Search />}
       <div className="flex flex-col gap-3">
         {isReview && (
@@ -36,14 +36,14 @@ const Products = async ({ isReview = false, products }) => {
                   alt={product.name}
                 />
                 <div className="flex w-full flex-col gap-3">
-                  <div className="flex items-center gap-3 text-xs lg:text-lg">
+                  <div className="flex items-center gap-3">
                     <Link
                       href={`/products/${product.slug}`}
-                      className="font-bold text-primary"
+                      className="font-bold text-primary text-base lg:text-lg"
                     >
                       {product.name}
                     </Link>
-                    <p className="text-xs font-semibold lg:text-sm">
+                    <p className="text-xs font-semibold !text-[7px] lg:text-sm">
                       {product.tagline}
                     </p>
                     <Link
@@ -59,7 +59,7 @@ const Products = async ({ isReview = false, products }) => {
                       <MessageCircle size={15} className="mb-0.5" />
                       <span>{product.comments.length}</span>
                     </div>
-                    {product.categories.map((cat) => {
+                    {product.categories.slice(0,2).map((cat) => {
                       const category = categories.find(
                         (c) => c.english === cat,
                       );

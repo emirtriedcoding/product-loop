@@ -35,7 +35,7 @@ const Notifications = () => {
   const unreadNotifications = notifications.filter((notif) => !notif.read);
 
   return (
-    <div className="mx-auto flex max-w-lg flex-col items-center gap-5 p-5">
+    <div className="mx-auto flex max-w-lg flex-col items-center gap-5 p-5 min-h-[900px]">
       <h2 className="text-xl font-bold">
         اعلانات حساب کاربری : {unreadNotifications.length}
       </h2>

@@ -28,9 +28,9 @@ export const categories = [
   { persian: "تکنولوژی", english: "technology", icon: MonitorSmartphone },
   { persian: "نرم‌افزار", english: "software", icon: Cpu },
   { persian: "بازی", english: "game", icon: Gamepad2 },
-  { persian: "اپلیکیشن موبایل", english: "app", icon: Smartphone },
+  { persian: "اپلیکیشن", english: "app", icon: Smartphone },
   { persian: "وب‌سایت", english: "website", icon: Globe2 },
-  { persian: "توسعه دهندگان", english: "developer", icon: Code },
+  { persian: "برنامه نویسی" , english: "developer", icon: Code },
   { persian: "استارتاپ", english: "startup", icon: Rocket },
   { persian: "آموزش", english: "education", icon: GraduationCap },
   { persian: "سلامت", english: "health", icon: HeartPulse },
@@ -47,5 +47,5 @@ export const categories = [
   { persian: "سبک زندگی", english: "lifestyle", icon: Check},
   { persian: "غذا و نوشیدنی", english: "food", icon: Utensils },
   { persian: "محیط زیست", english: "environment", icon: Leaf },
-  { persian: "تجارت الکترونیک", english: "e-commerce", icon: ShoppingCart },
+  { persian: "تجارت", english: "e-commerce", icon: ShoppingCart },
 ];

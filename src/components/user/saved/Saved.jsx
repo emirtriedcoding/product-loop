@@ -19,7 +19,7 @@ const Saved = () => {
   if (isLoading) return <Loader />;
 
   return (
-    <div className="space-y-8 px-10 h-screen">
+    <div className="space-y-5 lg:space-y-8 p-5 lg:px-10 min-h-[900px]">
       <h2 className="text-lg font-bold">ذخیره شده ها : </h2>
       {saved.length ? (
         <div className="grid grid-cols-2 gap-3 lg:grid-cols-8">
