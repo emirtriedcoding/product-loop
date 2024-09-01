@@ -45,7 +45,7 @@ export const categories = [
   { persian: "ورزش", english: "sports", icon: Dumbbell },
   { persian: "مسافرت", english: "travel", icon: Plane },
   { persian: "سبک زندگی", english: "lifestyle", icon: Check},
-  { persian: "غذا و نوشیدنی", english: "food", icon: Utensils },
+  { persian: "غذا", english: "food", icon: Utensils },
   { persian: "محیط زیست", english: "environment", icon: Leaf },
   { persian: "تجارت", english: "e-commerce", icon: ShoppingCart },
 ];

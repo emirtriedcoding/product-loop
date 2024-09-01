@@ -28,8 +28,7 @@ const Upvote = ({ product, user, isReview = false }) => {
     }
   };
 
-  // Check if user is null before accessing user._id
-  const userHasVoted = user ? product.upvotes.some((u) => u._id === user._id) : false;
+  const userHasVoted = user ? isReview ? product.upvotes.includes(user._id) : product.upvotes.some((u) => u._id === user._id) : false;
 
   return (
     <button

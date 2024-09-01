@@ -17,7 +17,7 @@ const Products = async ({ isReview = false, products }) => {
       <div className="flex flex-col gap-3">
         {isReview && (
           <>
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-xl lg:text-2xl font-bold">
               بهترین محصولات و پلتفرم های امروز
             </h1>
             <span className="divider"></span>
@@ -44,7 +44,7 @@ const Products = async ({ isReview = false, products }) => {
                       {product.name}
                     </Link>
                     <p className="text-xs font-semibold !text-[7px] lg:text-sm">
-                      {product.tagline}
+                      {product.tagline.slice(0,12)}
                     </p>
                     <Link
                       className="flex items-center transition hover:text-info"

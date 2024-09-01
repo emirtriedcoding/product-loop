@@ -363,12 +363,12 @@ const Product = ({ product, user, rank }) => {
                     </div>
                   )}
                   <p className="text-xs text-gray-500">{comment.user.email.slice(0,5)}..@gmail.com</p>
-                  <span className="text-sm font-semibold">
-                    {comment.user.name}
+                  <span className="text-xs font-semibold">
+                    {comment.user.name.split(" ")[0]}
                   </span>
                 </div>
               </div>
-              <p className="self-start text-sm font-bold">{comment.body}</p>
+              <p className="self-start text-sm font-bold !leading-8">{comment.body}</p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3 text-xs font-bold text-gray-500">
                   <span>{timeAgo(comment.createdAt)}</span>
@@ -414,7 +414,7 @@ const Product = ({ product, user, rank }) => {
                     disabled={replyMutation.isPending}
                     className="btn btn-primary w-full self-end"
                   >
-                    ارسال کامنت
+                    ارسال
                   </button>
                   <button
                     onClick={() => handleReplyToggle(comment._id)}
@@ -438,13 +438,13 @@ const Product = ({ product, user, rank }) => {
                     className="h-10 w-10 rounded-full"
                   />
                   <div className="flex items-center gap-2">
-                    <p className="text-xs text-gray-500">{reply.user.email}</p>
-                    <span className="text-sm font-semibold">
-                      {reply.user.name}
+                    <p className="text-xs text-gray-500">{reply.user.email.slice(0, 5)}...@gmail.com</p>
+                    <span className="text-xs font-semibold">
+                      {reply.user.name.split(" ")[0]}
                     </span>
                   </div>
                 </div>
-                <p className="self-start text-sm font-bold">{reply.body}</p>
+                <p className="self-start text-sm font-bold !leading-8">{reply.body}</p>
                 <div className="flex items-center gap-3 text-xs font-bold text-gray-500">
                   <span>{timeAgo(reply.createdAt)}</span>
                 </div>
@@ -478,19 +478,19 @@ const Product = ({ product, user, rank }) => {
           {product.instagram && (
             <Link href={`https://instagram.com/${product.instagram}`}>
               <Instagram
-                size={15}
+                size={18}
                 strokeWidth={1.5}
                 className="text-rose-500"
               />
             </Link>
           )}
           {product.linkedin && (
-            <Link href={`https://instagram.com/${product.linkedin}`}>
-              <Linkedin size={15} strokeWidth={1.5} className="text-sky-500" />
+            <Link href={`https://linkedin.com/in/${product.linkedin}`}>
+              <Linkedin size={18} strokeWidth={1.5} className="text-sky-500" />
             </Link>
           )}
         </div>
-        <p className="text-xs font-bold leading-loose">
+        <p className="text-xs font-bold !leading-8 text-center">
           محصول {product.name} در تاریخ{" "}
           {new Date(product.createdAt).toLocaleDateString("fa-IR")} توسط کاربر و
           سازنده آن ینی {product.user.name} در وبسایت پروداکت لوپ ایجاد و منشتر
