@@ -44,7 +44,7 @@ const Products = async ({ isReview = false, products }) => {
                       {product.name}
                     </Link>
                     <p className="text-xs font-semibold !text-[7px] lg:text-sm">
-                      {product.tagline.slice(0,12)}
+                      {product.tagline.slice(0,10)}..
                     </p>
                     <Link
                       className="flex items-center transition hover:text-info"

@@ -368,7 +368,7 @@ const Product = ({ product, user, rank }) => {
                   </span>
                 </div>
               </div>
-              <p className="self-start text-sm font-bold !leading-8">{comment.body}</p>
+              <p className="self-start text-xs lg:text-sm font-semibold !leading-8">{comment.body}</p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3 text-xs font-bold text-gray-500">
                   <span>{timeAgo(comment.createdAt)}</span>
@@ -444,7 +444,7 @@ const Product = ({ product, user, rank }) => {
                     </span>
                   </div>
                 </div>
-                <p className="self-start text-sm font-bold !leading-8">{reply.body}</p>
+                <p className="self-start text-xs lg:text-sm font-semibold !leading-8">{reply.body}</p>
                 <div className="flex items-center gap-3 text-xs font-bold text-gray-500">
                   <span>{timeAgo(reply.createdAt)}</span>
                 </div>
