@@ -1,8 +1,6 @@
 import NextAuth from "next-auth";
-
 import Google from "next-auth/providers/google";
 import Github from "next-auth/providers/github";
-
 import connectToDb from "@/config/db";
 import User from "@/models/User";
 
@@ -35,7 +33,7 @@ export const {
         }
         return false;
       } catch (error) {
-        console.log("Error while saving user into DB : ", error);
+        console.log("Error while saving user into DB:", error);
         return false;
       }
     },
@@ -49,9 +47,8 @@ export const {
       options: {
         httpOnly: true,
         path: "/",
-        maxAge: 60 * 60 * 24 * 7,
-        sameSite: "none",
-        secure: false,
+        sameSite: "lax", // or "strict" or "none" if needed
+        secure: true , // true in production
       },
     },
   },
