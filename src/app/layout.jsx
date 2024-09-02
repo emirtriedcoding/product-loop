@@ -30,7 +30,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://productloop.ir/assets/logo.png",
+        url: "/assets/logo.png",
         width: 1200,
         height: 630,
         alt: "Product Loop Logo",
@@ -42,7 +42,7 @@ export const metadata = {
     title: "پروداکت لوپ - پلتفرم های فارسی زبان",
     description:
       "پروداکت لوپ - پلتفرمی برای کسایی که محصول یا پلتفرمی که دارن رو به بقیه نشون بدن!",
-    image: "https://productloop.ir/assets/logo.png",
+    image: "/assets/logo.png",
   },
 };
 
