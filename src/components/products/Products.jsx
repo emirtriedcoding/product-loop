@@ -17,7 +17,7 @@ const Products = async ({ isReview = false, products }) => {
       <div className="flex flex-col gap-3">
         {isReview && (
           <>
-            <h1 className="text-xl lg:text-2xl font-bold">
+            <h1 className="text-xl font-bold lg:text-2xl">
               بهترین محصولات و پلتفرم های امروز
             </h1>
             <span className="divider"></span>
@@ -39,12 +39,12 @@ const Products = async ({ isReview = false, products }) => {
                   <div className="flex items-center gap-3">
                     <Link
                       href={`/products/${product.slug}`}
-                      className="font-bold text-primary text-sm lg:text-lg"
+                      className="text-sm font-bold text-primary lg:text-lg"
                     >
-                      {product.name.slice(0,10)}...
+                      {product.name.slice(0, 10)}...
                     </Link>
-                    <p className="font-semibold text-[7px] lg:text-sm">
-                      {product.tagline.slice(0,10)}..
+                    <p className="hidden text-[7px] font-semibold lg:block lg:text-sm">
+                      {product.tagline.slice(0, 10)}..
                     </p>
                     <Link
                       className="flex items-center transition hover:text-info"
@@ -59,7 +59,7 @@ const Products = async ({ isReview = false, products }) => {
                       <MessageCircle size={15} className="mb-0.5" />
                       <span>{product.comments.length}</span>
                     </div>
-                    {product.categories.slice(0,2).map((cat) => {
+                    {product.categories.slice(0, 2).map((cat) => {
                       const category = categories.find(
                         (c) => c.english === cat,
                       );
