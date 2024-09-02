@@ -18,9 +18,31 @@ import { Toaster } from "sonner";
 export const metadata = {
   title: "پروداکت لوپ - پلتفرم های فارسی زبان - جایی برای بهترین ها",
   description:
-    "پروداکت لوپ - پلتفرمی برای کسایی که محصول یا پلتفرمی که دارن رو به بقیه نشون بدن !",
+    "پروداکت لوپ - پلتفرمی برای کسایی که محصول یا پلتفرمی که دارن رو به بقیه نشون بدن!",
   icons: {
     icon: "/assets/logo.png",
+  },
+  openGraph: {
+    title: "پروداکت لوپ",
+    description:
+      "پروداکت لوپ - پلتفرمی برای کسایی که محصول یا پلتفرمی که دارن رو به بقیه نشون بدن!",
+    url: "https://productloop.ir",
+    type: "website",
+    images: [
+      {
+        url: "https://productloop.ir/assets/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Product Loop Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "پروداکت لوپ - پلتفرم های فارسی زبان",
+    description:
+      "پروداکت لوپ - پلتفرمی برای کسایی که محصول یا پلتفرمی که دارن رو به بقیه نشون بدن!",
+    image: "https://productloop.ir/assets/logo.png",
   },
 };
 
@@ -64,7 +86,7 @@ const RootLayout = async ({ children }) => {
   `}
         </Script>
       </head>
-      <body className={font.className} >
+      <body className={font.className}>
         <QueryProvider>
           <NextTopLoader height={4} color="#5347F6" />
           <Toaster

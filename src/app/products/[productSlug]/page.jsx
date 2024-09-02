@@ -15,12 +15,43 @@ export const generateMetadata = async ({ params }) => {
 
   const product = await ProductModel.findOne(
     { slug: productSlug },
-    "name tagline",
-  );
+    "name tagline images slug",
+  ).lean();
+
+  if (!product) {
+    return {
+      title: "محصولی پیدا نشد",
+      description: "محصول مورد نظر پیدا نشد.",
+    };
+  }
+
+  const siteUrl = "https://productloop.ir";
+  const productUrl = `${siteUrl}/products/${product.slug}`;
+  const productImage = product.thumbnail || "/assets/avatar.png"
 
   return {
-    title: `پروداکت لوپ محصول  - ${product?.name}`,
-    description: product?.tagline,
+    title: `پروداکت لوپ - ${product.name}`,
+    description: product.tagline,
+    openGraph: {
+      title: `پروداکت لوپ - ${product.name}`,
+      description: product.tagline,
+      url: productUrl,
+      type: "article",
+      images: [
+        {
+          url: productImage,
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `پروداکت لوپ - ${product.name}`,
+      description: product.tagline,
+      image: productImage,
+    },
   };
 };
 
