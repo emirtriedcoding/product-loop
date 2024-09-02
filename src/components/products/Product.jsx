@@ -341,7 +341,7 @@ const Product = ({ product, user, rank }) => {
                   </span>
                 </div>
               </div>
-              <pre className="self-start overflow-hidden whitespace-pre-wrap text-sm font-semibold leading-loose">
+              <pre className="self-start !font-Anjoman font-sans overflow-hidden whitespace-pre-wrap text-sm font-semibold leading-loose">
                 {product.firstComment}
               </pre>
             </div>
