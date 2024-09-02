@@ -39,9 +39,9 @@ const Products = async ({ isReview = false, products }) => {
                   <div className="flex items-center gap-3">
                     <Link
                       href={`/products/${product.slug}`}
-                      className="font-bold text-primary text-base lg:text-lg"
+                      className="font-bold text-primary text-sm lg:text-lg"
                     >
-                      {product.name}
+                      {product.name.slice(0,10)}...
                     </Link>
                     <p className="font-semibold text-[7px] lg:text-sm">
                       {product.tagline.slice(0,10)}..
@@ -68,7 +68,7 @@ const Products = async ({ isReview = false, products }) => {
                           <Link
                             key={cat}
                             href={`/categories/${category.english}`}
-                            className="rounded-lg bg-primary px-2 py-1 text-[10px] font-bold text-white lg:text-xs"
+                            className="rounded-lg bg-primary px-2 py-1 text-[8px] font-bold text-white lg:text-xs"
                           >
                             {category.persian}
                           </Link>

@@ -9,7 +9,7 @@ const ImageModal = ({ src }) => {
 
   return (
     <dialog id="image_modal" className="modal">
-      <div className="modal-box flex w-[900px] max-w-none flex-col items-center gap-3">
+      <div className="modal-box flex lg:w-[900px] max-w-none flex-col items-center gap-3">
         <img
           src={src}
           alt="Image in full size"

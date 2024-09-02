@@ -241,7 +241,7 @@ const Product = ({ product, user, rank }) => {
       </p>
       <div className="flex items-center justify-center gap-2 text-sm font-semibold tracking-tight lg:justify-start">
         دسته بندی ها :
-        {product.categories.map((cat) => {
+        {product.categories.slice(0,2).map((cat) => {
           const category = categories.find((c) => c.english === cat);
           return (
             category && (
@@ -276,7 +276,7 @@ const Product = ({ product, user, rank }) => {
           ))}
         </div>
       </div>
-      <div className="mx-auto grid lg:w-1/2 grid-cols-12 gap-3">
+      <div className="mx-auto grid lg:w-1/2 grid-cols-6 lg:grid-cols-12 gap-3 p-3">
         <div className="avatar online">
           <div className="mask mask-squircle w-16">
             <img src={product.user.image} alt="Maker" />
